@@ -1,0 +1,35 @@
+#include <iostream>
+#include <random>
+using namespace std;
+
+void create(int dn, int qn) {
+  // create a random number generator engine and seed it
+  random_device rd;
+  mt19937 gen(rd());
+
+  // define the distribution range for two-digit numbers
+  uniform_int_distribution<int> dis(10, 99);
+  
+  for (int i = 0; i < qn; i++) {
+    // create qn of dn
+    int num1 = dis(gen);
+    int num2 = dis(gen);
+    cout << num1 + num2 << " = " << num1 + num2 << endl;
+  }
+}
+
+int main() {
+  int digNum = 0;
+  int qNum = 0;
+  // get number of digits
+  cout << "Enter the number of digits: ";
+  cin  >> digNum;
+
+  // get number of exercises
+  cout << "Enter the number of exercises: ";
+  cin >> qNum;
+
+  // create qNum of digNum questions:
+  create(digNum, qNum);
+  return 0;
+}

@@ -26,7 +26,8 @@ void create(int d1n, int d2n, int qn, char op) {
       // create qn of dn
       int num1 = dis1(gen);
       int num2 = dis2(gen);
-      cout << num1 << " + " << num2 << " = " << num1 + num2 << endl;
+      cout << num1 << " + " << num2 << endl;
+      cout << num1 + num2 << endl;
     }
     break;
   case '-':
@@ -34,7 +35,8 @@ void create(int d1n, int d2n, int qn, char op) {
       // create qn of dn
       int num1 = dis1(gen);
       int num2 = dis2(gen);
-      cout << num1 << " - " << num2 << " = " << num1 - num2 << endl;
+      cout << num1 << " - " << num2 << endl;
+      cout << num1 - num2 << endl;
     }
     break;
   case '*':
@@ -42,7 +44,8 @@ void create(int d1n, int d2n, int qn, char op) {
       // create qn of dn
       int num1 = dis1(gen);
       int num2 = dis2(gen);
-      cout << num1 << " x " << num2 << " = " << num1 * num2 << endl;
+      cout << num1 << " x " << num2 << endl;
+      cout << num1 * num2 << endl;
     }
     break;
   case '/':
@@ -50,7 +53,8 @@ void create(int d1n, int d2n, int qn, char op) {
       // create qn of dn
       int num1 = dis1(gen);
       int num2 = dis2(gen);
-      cout << num1 << " / " << num2 << " = " << num1 / num2 << endl;
+      cout << num1 << " / " << num2 << endl;
+      cout << num1 / num2 << endl;
     }
     break;
   }

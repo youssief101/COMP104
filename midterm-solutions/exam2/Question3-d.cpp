@@ -2,8 +2,8 @@
 using namespace std;
 
 int main() {
-    int x = 4;
-    x = 5 / x && x - 4;
+    int x = 5;
+    x = x++ % 5 || x - 5;
     if (x)
         cout << "True" << endl;
     else

@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
     int x = 5;
-    x = x++ % 5 || x - 5;
+    x = 5 / x && x - 10;
     if (x)
         cout << "True" << endl;
     else

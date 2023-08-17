@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+void delete(double (&arr)[], int &size; int position) {
+  
+}
+
+int main() {
+  const int size = 1000;
+  double arr[size];
+  int actualSize = 0;
+
+  // get actual size from the user
+  cout << "size of array: ";
+  cin >> actualSize;
+
+  // get array elements from the user
+  cout << "array elements: ";
+  for (int i = 0; i < actualSize; i++)
+    cin >> arr[i];
+
+  
+  return 0;
+}

@@ -1,13 +1,22 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int main() {
-    int n = 0;
-    cin >> n;
-    // n is between 0 and 20 but not odd
-    if (n >= 0 && n <= 20 && n % 2 == 0)
-        cout << "true" << endl;
-    else
-        cout << "false" << endl;
-    return 0;
+  const int size = 50;
+  double arr[size];
+
+  for (int i = 0; i < size / 2; i++)
+    arr[i] = pow((i + 1), 2);
+
+  for (int i = size - 1; i >= size / 2; i--)
+    arr[i] = 3 * (i + 1);
+
+  for (int i = 0; i < size; i++) {
+    cout << arr[i] << "\t";
+    if (i != 0 && (i + 1) % 10 == 0)
+      cout << endl;
+  }
+  cout << endl;
+  return 0;
 }

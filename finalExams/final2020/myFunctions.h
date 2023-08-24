@@ -18,10 +18,30 @@ double computeFunction(int n) {
 // check if the digit is prime or not
 bool isPrime(int n) {
   // 0 and 1 are not prime numbers.  int start = 0;
+  if (n <= 1)
+    return false;
+
+  // only check if the digit is divisible by any number from 2 to its square root
+  for (int i = 2; i <= sqrt(n); i++)
+    if (n % i == 0)
+      return false;
+  return true;
+}
+
+bool isMagicSquare(int matrix[10][10], int n) {
+  // check that each element in the matrix appears once
+  // create a linear array from the matrix
+  int start = 0, arr[n * n];
   for (int i = 0; i < n; i++)
     for (int j = 0; j < n; j++)
       arr[start++] = matrix[i][j];
-	
+
+  // check the appearance
+  for (int i = 0; i < n * n; i++)
+    for (int j = i + 1; j < n * n; j++)
+      if (arr[i] == arr[j])
+	return false;
+  
   // Calculate the sum of the first diagonal
   int sum1 = 0;
   for (int i = 0; i < n; i++) {

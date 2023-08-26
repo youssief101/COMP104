@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  /*
+    Write a program that read the letter codes 'A' to 'Z' and prints the corresponding
+    telephone digit based on the dial pad. if the user enters any other letter the program
+    prints "invalid input" to the user. The program stops and prints "Done!"
+    When the user enters '#'.
+    2 {A, B, C}
+    3 {D, E, F}
+    4 {G, H, I}
+    5 {J, K, L}
+    6 {M, N, O}
+    7 {P, Q, R, S}
+    8 {T, U, V}
+    9 {W, X, Y, Z}
+   */
+  return 0;
+}

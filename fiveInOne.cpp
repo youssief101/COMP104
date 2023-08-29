@@ -5,7 +5,7 @@ using namespace std;
 bool isPrime(int num) {
   if (num <= 1)
     return false;
-  for (int i = 2; i < sqrt(num); i++)
+  for (int i = 2; i <= sqrt(num); i++)
     if (num % i == 0)
       return false;
 
@@ -23,8 +23,6 @@ int reverse(int num) {
 }
 
 bool isPalindrome(int ordered, int reversed) {
-  if (ordered < 10)
-    return true;
   if (ordered == reversed)
     return true;
 
@@ -70,7 +68,7 @@ int countDivisors(int arr[], const int size) {
   int i = 0;
   while (i < size) {
     divCtr = 0;
-    for (int k = 1; k < sqrt(arr[k]); k++)
+    for (int k = 1; k <= sqrt(arr[k]); k++)
       if (arr[i] % k == 0)
 	divCtr++;
     if (maxDivs < divCtr) {

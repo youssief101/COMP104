@@ -23,10 +23,12 @@ int reverse(int num) {
 }
 
 bool isPalindrome(int ordered, int reversed) {
+  if (ordered < 10)
+    return true;
   if (ordered == reversed)
     return true;
-  else
-    return false;
+
+  return false;
 }
 
 int findMax(int arr[], const int size) {
@@ -104,7 +106,7 @@ int main() {
 
   // find number of prime numbers:
   int primNum = countPrime(arr, size);
-  cout << "The number of Prime numbers : " << primNum << endl;
+  cout << "The number of prime numbers : " << primNum << endl;
 
   // find number of palindrome numbers:
   int palindromeNum = countPalindrome(arr, size);
@@ -112,7 +114,7 @@ int main() {
   
   // max number of divisors
   int maxDivNums = countDivisors(arr, size);
-  cout << "The number that has the maximum number of divisors : " << countDivisors << endl;
+  cout << "The number that has the maximum number of divisors : " << maxDivNums << endl;
   
   return 0;
 }

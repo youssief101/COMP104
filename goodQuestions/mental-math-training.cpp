@@ -35,6 +35,11 @@ void create(int d1n, int d2n, int qn, char op) {
       // create qn of dn
       int num1 = dis1(gen);
       int num2 = dis2(gen);
+
+      // Ensure num1 is greater than or equal to num2
+      if (num1 < num2)
+	swap(num1, num2);
+      
       cout << num1 << " - " << num2 << endl;
       cout << num1 - num2 << endl;
     }
